@@ -1,0 +1,42 @@
+<section local-class="section">
+  <h1 local-class="section-title">
+    {{t "page.about.sync.title"}}
+  </h1>
+
+  <p local-class="section-description">
+    {{t "page.about.sync.description"}}
+  </p>
+
+  <Form::Checkbox
+    local-class="sync-checkbox"
+    @value={{this.syncEnabled}}
+    @label={{t "page.about.sync.enable-label"}}
+    @onChange={{this.onToggleSync}}
+    @disabled={{this.isToggling}}
+  />
+
+  {{#if this.isToggling}}
+    <p local-class="status-text migrating">
+      {{t "page.about.sync.migrating"}}
+    </p>
+  {{/if}}
+
+  {{#if this.lastError}}
+    <p local-class="status-text error">
+      {{t "page.about.sync.error-message" error=this.lastError}}
+    </p>
+  {{/if}}
+
+  {{#if this.syncEnabled}}
+    <div local-class="quota-info">
+      <span local-class="quota-label">{{t "page.about.sync.quota-label"}}</span>
+      <span local-class="quota-value">{{this.formattedQuotaUsage}}</span>
+    </div>
+
+    {{#if this.showQuotaWarning}}
+      <p local-class="status-text warning">
+        {{t "page.about.sync.quota-warning"}}
+      </p>
+    {{/if}}
+  {{/if}}
+</section>

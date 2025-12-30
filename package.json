@@ -17,6 +17,10 @@
     "node": "~12.22",
     "npm": "~6.14"
   },
+  "volta": {
+    "node": "12.22.12",
+    "npm": "6.14.18"
+  },
   "scripts": {
     "clean": "rimraf dist",
     "dev": "npm run clean && npm run scaffold-extension dev && npm run ember:watch",

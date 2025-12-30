@@ -1,6 +1,14 @@
 page:
   about:
     disclaimer: This extension is fan-made and not affiliated with Grinding Gear Games in any way.
+    sync:
+      title: Cloud Sync
+      description: Sync your bookmarks and search history across devices using your browser account.
+      enable-label: Enable cloud sync
+      quota-label: "Storage used:"
+      quota-warning: You are approaching the cloud storage limit. Consider archiving or deleting old bookmarks.
+      migrating: Migrating data...
+      error-message: "Error: {error}"
     enhancers:
       title: Enabled item result enhancers
       equivalent-pricings: Equivalent pricings (powered by poe.ninja)
